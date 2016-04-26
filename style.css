@@ -1,0 +1,17 @@
+body {
+	font-size:2vw;
+	text-align:center;
+}
+input {
+	background:none;
+	border-width:0;
+	border-style:none;
+	border-bottom-style:solid;
+	border-bottom-width:2px;
+	font-size:2vw;
+}
+button {
+	position:absolute;
+	left:5px;
+	top:5px;
+}
