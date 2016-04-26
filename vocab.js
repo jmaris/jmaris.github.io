@@ -1,5 +1,4 @@
-function init() {
-direction="frde";
+function loadvocab() {
 vocab = [
 	["le projet de loi","der Gesetzentwurf"],
 	["le code du travail","französisches Arbeitsgesetzbuch"],
@@ -75,11 +74,4 @@ vocab = [
 	["assouplir (la réglementation sur le licenciement)","den Kündigungsschutz lockern"],
 	["l’assouplissement","die Lockerung"],
 	];
-	workingVocab=shuffle(vocab);
-	newWord();
-	$("input").on("keydown",function search(e) {
-    if(e.keyCode == 13) {
-        checkVocab()
-    }
-});
 }

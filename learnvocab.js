@@ -74,5 +74,15 @@ function checkVocab() {
 	document.getElementById('wordsleft').innerHTML=workingVocab.length + " mots restants !";
 }
 
+function init() {
+	direction="frde";
+	workingVocab=shuffle(vocab);
+	newWord();
+	$("input").on("keydown",function search(e) {
+    if(e.keyCode == 13) {
+        checkVocab()
+    }
+});
+}
 
 
