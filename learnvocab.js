@@ -42,32 +42,31 @@ function newWord() {
 	}
 }
 
+function rightAnswer(){
+	document.body.style.backgroundColor = "lightgreen";
+	document.getElementById('wordtotranslate').innerHTML="Correct !";
+	workingVocab.splice(0,1);
+	document.getElementById('comment').innerHTML="";
+	newWord();
+}
 function checkVocab() {
-	answer=document.getElementById('translatedword').value;
+	answer=document.getElementById('translatedword').value.toLowerCase();
 	if(direction=="frde"){
-		if(answer==workingVocab[0][1]) {
-			document.body.style.backgroundColor = "lightgreen";
-			document.getElementById('wordtotranslate').innerHTML="Correct !";
-			workingVocab.splice(0,1);
-			document.getElementById('comment').innerHTML="";
-			newWord();
+		if(answer==workingVocab[0][1].toLowerCase()) {
+			rightAnswer();
 		}
 		else {
-			document.body.style.backgroundColor = "red";
+			document.body.style.backgroundColor = "#C24641";
 			document.getElementById('comment').innerHTML="Incorrect ! Please type the correction : <h1>" + workingVocab[0][1] + "</h1>";
 		}
 	}
 	
 	else if(direction=="defr") {
-		if(answer==workingVocab[0][0]) {
-			document.body.style.backgroundColor = "green";
-			document.getElementById('wordtotranslate').innerHTML="Correct !";
-			workingVocab.splice(0, 1);
-			document.getElementById('comment').innerHTML="";
-			newWord();
+		if(answer==workingVocab[0][0].toLowerCase()) {
+			rightAnswer();
 		}
 		else {
-			document.body.style.backgroundColor = "red";
+			document.body.style.backgroundColor = "#C24641";
 			document.getElementById('comment').innerHTML="Incorrect ! Please type the correction : <h1>" + workingVocab[0][0] + "</h1>";
 		}
 	}
@@ -76,6 +75,7 @@ function checkVocab() {
 
 function init() {
 	direction="frde";
+	loadvocab();
 	workingVocab=shuffle(vocab);
 	newWord();
 	$("input").on("keydown",function search(e) {
@@ -85,4 +85,27 @@ function init() {
 });
 }
 
+// THIS IS SUCH BAD PRACTICE, PLEASE DO NOT JUDGE ME
 
+function loadjscssfile(filename, filetype){
+    if (filetype=="js"){ //if filename is a external JavaScript file
+        var fileref=document.createElement('script')
+        fileref.setAttribute("type","text/javascript")
+        fileref.setAttribute("src", filename)
+    }
+    else if (filetype=="css"){ //if filename is an external CSS file
+        var fileref=document.createElement("link")
+        fileref.setAttribute("rel", "stylesheet")
+        fileref.setAttribute("type", "text/css")
+        fileref.setAttribute("href", filename)
+    }
+    if (typeof fileref!="undefined")
+        document.getElementsByTagName("head")[0].appendChild(fileref)
+}
+
+
+function loadvocabfile(vocabfile) {
+	loadjscssfile(vocabfile, 'js');
+	init();
+	newWord();
+}

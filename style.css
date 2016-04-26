@@ -1,6 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);
 body {
 	font-size:2vw;
 	text-align:center;
+	font-family:Roboto,sans-serif;
+	text-transform:uppercase;
 }
 input {
 	background:none;
@@ -8,7 +11,10 @@ input {
 	border-style:none;
 	border-bottom-style:solid;
 	border-bottom-width:2px;
+	border-bottom-color:#666362;
 	font-size:2vw;
+	text-transform:uppercase;
+	text-align:center;
 }
 button {
 	position:absolute;

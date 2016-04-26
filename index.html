@@ -8,9 +8,14 @@
 	<script type="text/javascript" src="vocab.js"></script>
 	<script type="text/javascript" src="learnvocab.js"></script>
 </head>
-<body onload="loadvocab(); init();">
-<h3 id="direction">Direction : frde</h3><button onclick="changeDirection()">Change Direction</button>
- <h2> Translate : </h2>
+<body>
+<p id="direction">Direction : frde</p>
+<p>
+	<a href="#" onclick="loadvocabfile('vocablists/easyvocab.js')">Load Easy Vocab</a> |
+	<a href="#" onclick="loadvocabfile('vocablists/allvocab.js')">Load Nightmare vocab</a>
+</p>
+<button onclick="changeDirection()">Change Direction</button>
+ <h4> Translate : </h4>
  <h1 id="wordtotranslate"></h1>
  <input type="text" name="translatedword" id="translatedword" autofocus="autofocus">
  <p id="comment"></p>
