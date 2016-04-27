@@ -1,7 +1,7 @@
 function loadvocab() {
 vocab = [
 	["le projet de loi","der Gesetzentwurf"],
-	["le code du travail","französisches Arbeitsgesetzbuch"],
+	["le code du travail","das französisches Arbeitsgesetzbuch"],
 	["un accord","die Vereinbarung"],
 	["accord d’entreprise","Betriebsvereinbarung"],
 	["accord de branche","Branchenvereinbarung"],
