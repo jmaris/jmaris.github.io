@@ -1,6 +1,8 @@
 function loadvocab() {
 vocab = [
 	["le projet de loi","der Gesetzentwurf"],
+	["exception","ausnahme"],
+	["approbation","genehmigung"],
 	["le code du travail","das französisches Arbeitsgesetzbuch"],
 	["un accord","die Vereinbarung"],
 	["entreprise","Betrieb"],
@@ -20,8 +22,8 @@ vocab = [
 	["autorité administrative","Behörde"],
 	["le délégué du personnel","der Personalvertreter"],
 	["le syndicat","die Gewerkschaft"],
-	["les difficultés économiques","wirtschaftliche Schwierigkeiten"],
-	["les suppressions d’emploi","Stellenstreichungen"],
+	["difficultés économiques","wirtschaftliche Schwierigkeiten"],
+	["suppressions d’emploi","Stellenstreichungen"],
 	["supprimer des emplois","Stellen streichen"],
 	["la compétitivité","die Wettbewerbsfähigkeit"],
 	["le contrat de travail","der Arbeitsvertrag"],
