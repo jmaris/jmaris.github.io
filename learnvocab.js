@@ -78,11 +78,11 @@ function checkVocab() {
 }
 
 function init() {
+	lastanswer=true;
 	direction="frde";
 	loadvocab();
 	workingVocab=shuffle(vocab);
 	newWord();
-	lastanswer=true;
 	$("input").on("keydown",function search(e) {
     if(e.keyCode == 13) {
         checkVocab()
