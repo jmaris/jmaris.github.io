@@ -43,9 +43,11 @@ function newWord() {
 }
 
 function rightAnswer(){
+	if(lastanswer==true) {workingVocab.splice(0,1);}
+	else {workingVocab=shuffle(workingVocab);}
+	lastanswer=true;
 	document.body.style.backgroundColor = "lightgreen";
 	document.getElementById('wordtotranslate').innerHTML="Correct !";
-	workingVocab.splice(0,1);
 	document.getElementById('comment').innerHTML="";
 	newWord();
 }
@@ -58,6 +60,7 @@ function checkVocab() {
 		else {
 			document.body.style.backgroundColor = "#C24641";
 			document.getElementById('comment').innerHTML="Incorrect ! Please type the correction : <h1>" + workingVocab[0][1] + "</h1>";
+			lastanswer=false;
 		}
 	}
 	
@@ -68,6 +71,7 @@ function checkVocab() {
 		else {
 			document.body.style.backgroundColor = "#C24641";
 			document.getElementById('comment').innerHTML="Incorrect ! Please type the correction : <h1>" + workingVocab[0][0] + "</h1>";
+			lastanswer=false;
 		}
 	}
 	document.getElementById('wordsleft').innerHTML=workingVocab.length + " mots restants !";
